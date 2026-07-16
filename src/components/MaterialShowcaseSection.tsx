@@ -1,20 +1,16 @@
 import { motion } from "framer-motion";
-import mapa1 from "@/assets/mapa-1.png.asset.json";
-import mapa2 from "@/assets/mapa-2.png.asset.json";
-import mapa3 from "@/assets/mapa-3.png.asset.json";
-import mapa4 from "@/assets/mapa-4.png.asset.json";
-import mapa5 from "@/assets/mapa-5.png.asset.json";
-import mapa6 from "@/assets/mapa-6.png.asset.json";
-import mapa7 from "@/assets/mapa-7.png.asset.json";
+import mapaCoerenciaTextual from "@/assets/mapa-coerencia-textual.png";
+import mapaOracoesSubordinadasReduzidas from "@/assets/mapa-oracoes-subordinadas-reduzidas.png";
+import mapaExpressoesProblematicas from "@/assets/mapa-expressoes-problematicas.png";
+import mapaRegenciaNominal from "@/assets/mapa-regencia-nominal.png";
+import mapaTiposDeTexto from "@/assets/mapa-tipos-de-texto.png";
 
 const images = [
-  { src: mapa1.url, alt: "Mapa mental — Variação Linguística" },
-  { src: mapa2.url, alt: "Mapa mental — Homônimos e Parônimos" },
-  { src: mapa3.url, alt: "Mapa mental — Coerência Textual" },
-  { src: mapa4.url, alt: "Mapa mental — Tipos de Texto" },
-  { src: mapa5.url, alt: "Mapa mental — Expressões Problemáticas" },
-  { src: mapa6.url, alt: "Mapa mental — Lista de Parônimos" },
-  { src: mapa7.url, alt: "Mapa mental — Regência Nominal" },
+  { src: mapaCoerenciaTextual, alt: "Mapa mental — Coerência Textual" },
+  { src: mapaOracoesSubordinadasReduzidas, alt: "Mapa mental — Orações Subordinadas Reduzidas" },
+  { src: mapaExpressoesProblematicas, alt: "Mapa mental — Expressões Problemáticas" },
+  { src: mapaRegenciaNominal, alt: "Mapa mental — Regência Nominal" },
+  { src: mapaTiposDeTexto, alt: "Mapa mental — Tipos de Texto" },
 ];
 
 const MaterialShowcaseSection = () => {
