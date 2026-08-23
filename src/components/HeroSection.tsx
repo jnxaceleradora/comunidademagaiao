@@ -5,7 +5,7 @@ import marcelaLogo from "@/assets/logo-marcela-neon.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden pt-20 md:pt-24 pb-16 md:pb-24 px-4 md:px-8">
+    <section className="relative overflow-hidden pt-6 md:pt-8 pb-16 md:pb-24 px-4 md:px-8">
       {/* Ambient neon glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 -left-20 w-96 h-96 rounded-full bg-primary/20 blur-[120px]" />
