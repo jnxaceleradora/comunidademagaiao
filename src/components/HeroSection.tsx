@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import heroBanner from "@/assets/banner-mapas-mentais-marcela.png";
 
 const HeroSection = () => {
   return (
@@ -12,17 +13,24 @@ const HeroSection = () => {
 
       <div className="container-narrow relative z-10">
         <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto mb-12 md:mb-16 overflow-hidden rounded-2xl border border-primary/35 shadow-2xl shadow-primary/20"
+        >
+          <img
+            src={heroBanner}
+            alt="Mapas Mentais de Língua Portuguesa com Marcela Gaião"
+            className="block h-auto w-full"
+          />
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/40 rounded-full px-4 py-1.5 mb-6">
-            <span className="font-heading text-sm md:text-base font-bold text-neon-yellow tracking-wide">
-              +100 mapas mentais
-            </span>
-            <span className="text-foreground/80 text-sm md:text-base">para revisar</span>
-          </div>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
             <span className="text-neon-pink">Pare</span>{" "}
             <span className="text-neon-yellow">de estudar</span>{" "}
