@@ -1,15 +1,8 @@
 import { motion } from "framer-motion";
 import { Award, BookOpen, Users, Target } from "lucide-react";
-import marcelaPhoto from "@/assets/marcela.png";
+import marcelaPhoto from "@/assets/marcela-profissional-source.jpg";
 
 const stats = [
-  {
-    icon: Award,
-    title: "Quem sou?",
-    titleClass: "text-neon-blue",
-    image: marcelaPhoto,
-    text: "Meu nome é Marcela Gaião. Sou professora especialista em Língua Portuguesa e servidora pública concursada há mais de 12 anos. Dediquei minha carreira ao ensino da língua e à preparação de estudantes para concursos e provas. Todo o material que você encontrará aqui foi elaborado com base na experiência de quem domina o conteúdo e sabe exatamente o que realmente importa para alcançar excelentes resultados.",
-  },
   {
     icon: Users,
     title: "Aprovações",
@@ -51,7 +44,48 @@ const AuthoritySection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative mb-8 overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-background/80 via-secondary-foreground/[0.04] to-primary/10 shadow-2xl shadow-primary/10"
+        >
+          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
+          <div className="relative grid items-center lg:grid-cols-[0.85fr_1.15fr]">
+            <div className="relative min-h-[420px] overflow-hidden lg:min-h-[560px]">
+              <img
+                src={marcelaPhoto}
+                alt="Marcela Gaião, professora especialista em Língua Portuguesa"
+                className="absolute inset-0 h-full w-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/75 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-background/75" />
+              <div className="absolute bottom-5 left-5 rounded-full border border-white/20 bg-background/75 px-4 py-2 backdrop-blur-md">
+                <span className="font-heading text-sm font-semibold text-neon-yellow">+12 anos de experiência</span>
+              </div>
+            </div>
+
+            <div className="relative p-7 md:p-10 lg:p-14">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/15">
+                <Award className="h-6 w-6 text-primary" />
+              </div>
+              <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-neon-cyan">
+                Experiência que orienta
+              </p>
+              <h3 className="mb-6 font-heading text-3xl font-bold text-neon-blue md:text-4xl">
+                Conheça Marcela Gaião
+              </h3>
+              <p className="text-base leading-relaxed text-secondary-foreground/90 md:text-lg">
+                Sou professora especialista em Língua Portuguesa e servidora pública concursada há mais de 12 anos. Minha trajetória reúne experiência prática no ensino e na preparação de candidatos para concursos e provas.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-secondary-foreground/80 md:text-lg">
+                Ao longo desse percurso, desenvolvi uma metodologia que transforma conteúdos complexos em explicações claras, revisões estratégicas e materiais focados no que realmente é cobrado. Cada conteúdo da Comunidade Magaião nasce desse domínio técnico e da experiência de quem conhece, na prática, o caminho entre o estudo e a aprovação.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -67,15 +101,6 @@ const AuthoritySection = () => {
               <h3 className={`font-heading text-2xl md:text-3xl font-bold mb-3 ${stat.titleClass}`}>
                 {stat.title}
               </h3>
-              {stat.image && (
-                <div className="mb-4 flex justify-center">
-                  <img
-                    src={stat.image}
-                    alt="Marcela Gaião"
-                    className="w-48 md:w-56 h-auto drop-shadow-[0_10px_25px_rgba(255,45,146,0.25)]"
-                  />
-                </div>
-              )}
               <p className="text-secondary-foreground/85 text-base leading-relaxed">
                 {stat.text}
               </p>
