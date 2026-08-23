@@ -9,13 +9,13 @@ const topics = [
     neon: "text-neon-pink",
     subtopics: [
       "Dicas de interpretação",
-      "Compreensão versus interpretação",
-      "Inferir versus desprender",
+      "Compreensão x Interpretação",
+      "Inferir x Depreender",
       "Análise do discurso",
       "Tipos de discurso",
       "Intertextualidade",
-      "Citação versus paráfrase",
-      "Paródia versus alusão",
+      "Citação x Paráfrase",
+      "Paródia x Alusão",
       "Tipologia textual",
       "Gêneros textuais",
     ],
@@ -106,7 +106,7 @@ const ContentsSection = () => {
                 <div className="mb-6 flex items-center justify-between gap-4">
                   <div>
                     <p className="mb-1 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-neon-cyan">
-                      Conteúdos incluídos
+                      Conteúdos
                     </p>
                     <h3 className={`font-heading text-2xl font-bold md:text-3xl ${selectedTopic.neon}`}>
                       {selectedTopic.name}
