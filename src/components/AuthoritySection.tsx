@@ -1,25 +1,21 @@
 import { motion } from "framer-motion";
-import { Award, BookOpen, Users, Target } from "lucide-react";
+import { Award, BookOpen, Target } from "lucide-react";
 import marcelaPhoto from "@/assets/marcela-profissional-source.jpg";
 
 const stats = [
   {
-    icon: Users,
-    title: "Aprovações",
-    titleClass: "text-neon-yellow",
-    text: "Há mais de 12 anos dedicando minha carreira ao ensino da Língua Portuguesa, tive o privilégio de contribuir para a preparação de milhares de alunos em busca da aprovação em concursos públicos e vestibulares. Ao longo dessa trajetória, acompanhei inúmeras histórias de sucesso de estudantes que conquistaram seus objetivos por meio de um estudo organizado, consistente e estratégico. Meu compromisso é oferecer um método que realmente funcione, tornando o aprendizado mais simples, eficiente e focado no que as provas exigem.",
-  },
-  {
     icon: BookOpen,
     title: "Método",
     titleClass: "text-neon-pink",
-    text: "A diferença entre quem estuda e quem é aprovado está no método. Na Comunidade Magaião, cada resumo, mapa mental e questão foi pensado para acelerar seu aprendizado, facilitar a memorização e tornar a revisão muito mais eficiente. Você estuda com estratégia, ganha confiança e chega à prova realmente preparado.",
+    eyebrow: "Clareza, fixação e revisão",
+    text: "Estudar mais não basta: é preciso estudar com direção. Por isso, cada mapa mental, resumo e questão organiza a Língua Portuguesa em uma sequência clara para compreender, fixar e revisar. Você identifica o que realmente importa, reduz o excesso de informação e chega à prova com mais segurança para reconhecer padrões, evitar armadilhas e aplicar o conhecimento.",
   },
   {
     icon: Target,
     title: "Foco",
     titleClass: "text-neon-lilac",
-    text: "Nosso objetivo é mostrar que aprender Português pode ser mais fácil do que você imagina. Com materiais organizados, linguagem clara e muita prática, a Comunidade Magaião oferece tudo o que você precisa para estudar com confiança e conquistar a tão sonhada aprovação.",
+    eyebrow: "Conteúdo que se transforma em resultado",
+    text: "Na Comunidade Magaião, o foco é transformar conteúdos que parecem difíceis em aprendizado objetivo e aplicável. A linguagem é clara, sem abrir mão da profundidade: conceitos essenciais, pontos mais cobrados e revisão estratégica. Assim, você constrói uma base sólida em Português, estuda com constância e evolui com um método pensado para o desempenho na prova.",
   },
 ];
 
@@ -85,7 +81,7 @@ const AuthoritySection = () => {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -93,15 +89,19 @@ const AuthoritySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-secondary-foreground/5 border border-secondary-foreground/10 rounded-2xl p-6"
+              className="group relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-background/80 via-secondary-foreground/[0.04] to-primary/10 p-7 shadow-xl shadow-primary/5 md:p-9"
             >
-              <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center mb-4">
-                <stat.icon className="w-6 h-6 text-primary" />
+              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl transition-colors group-hover:bg-primary/20" />
+              <div className="relative mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/15">
+                <stat.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className={`font-heading text-2xl md:text-3xl font-bold mb-3 ${stat.titleClass}`}>
+              <p className="relative mb-2 font-heading text-xs font-semibold uppercase tracking-[0.16em] text-neon-cyan/90">
+                {stat.eyebrow}
+              </p>
+              <h3 className={`relative mb-4 font-heading text-2xl font-bold md:text-3xl ${stat.titleClass}`}>
                 {stat.title}
               </h3>
-              <p className="text-secondary-foreground/85 text-base leading-relaxed">
+              <p className="relative text-base leading-relaxed text-secondary-foreground/85 md:text-lg">
                 {stat.text}
               </p>
             </motion.div>
