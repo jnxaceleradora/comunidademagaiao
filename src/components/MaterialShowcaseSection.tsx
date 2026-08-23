@@ -45,12 +45,12 @@ const MaterialShowcaseSection = () => {
           {loop.map((img, i) => (
             <div
               key={i}
-              className="w-[280px] sm:w-[360px] md:w-[480px] shrink-0 rounded-2xl overflow-hidden border border-border shadow-lg shadow-primary/10 bg-card"
+              className="w-[280px] h-[210px] sm:w-[360px] sm:h-[270px] md:w-[480px] md:h-[340px] shrink-0 rounded-2xl overflow-hidden border border-border shadow-lg shadow-primary/10 bg-white"
             >
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-auto block"
+                className="w-full h-full block object-contain"
                 loading="lazy"
               />
             </div>
