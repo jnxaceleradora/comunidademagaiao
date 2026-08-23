@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import bannerAsset from "@/assets/banner-hero.png.asset.json";
 
 const HeroSection = () => {
   return (
@@ -12,20 +11,6 @@ const HeroSection = () => {
       </div>
 
       <div className="container-narrow relative z-10">
-        {/* Banner as hero */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 border border-primary/30 mb-12"
-        >
-          <img
-            src={bannerAsset.url}
-            alt="Comunidade Magaião — Mapas Mentais, Questões e Resumos para Concursos"
-            className="w-full h-auto block"
-          />
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
