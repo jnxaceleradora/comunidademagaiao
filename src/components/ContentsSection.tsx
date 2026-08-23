@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckCircle2, ChevronDown, FileText, Type, Link2, PenTool, MoreHorizontal, GitBranch, Layers, Sparkles, Palette, Network, MessageCircle, Mic } from "lucide-react";
+import { BookOpen, CheckCircle2, ChevronDown, FileText, Type, Link2, PenTool, MoreHorizontal, GitBranch, Layers, Sparkles, Palette, Network, MessageCircle, Mic } from "lucide-react";
 
 const topics = [
   {
@@ -30,8 +30,45 @@ const topics = [
   { icon: Sparkles, name: "Estilística", neon: "text-neon-pink" },
   { icon: Palette, name: "Figuras de linguagem", neon: "text-neon-lilac" },
   { icon: Network, name: "Coesão e coerência", neon: "text-neon-yellow" },
-  { icon: MessageCircle, name: "Semântica", neon: "text-neon-blue" },
-  { icon: Mic, name: "Fonética e Fonologia", neon: "text-neon-pink" },
+  {
+    icon: MessageCircle,
+    name: "Semântica",
+    neon: "text-neon-blue",
+    subtopics: [
+      "Conceitos",
+      "Relações de sentido entre as palavras",
+      "Homônimos x Parônimos",
+      "Lista de parônimos",
+    ],
+  },
+  {
+    icon: Mic,
+    name: "Fonética e Fonologia",
+    neon: "text-neon-pink",
+    subtopics: [
+      "Fonética x Fonologia",
+      "Fonologia",
+      "Classificação dos fonemas",
+      "Encontros vocálicos e consonantais",
+      "Dígrafos x Dífonos",
+      "Classificação das sílabas",
+    ],
+  },
+  {
+    icon: BookOpen,
+    name: "Ortografia",
+    neon: "text-neon-yellow",
+    subtopics: [
+      "Acentuação gráfica",
+      "Uso dos porquês",
+      "Uso do hífen",
+      "Emprego das letras",
+      "Uso de maiúsculas e minúsculas",
+      "Expressões problemáticas",
+      "Estrangeirismo, abreviação e sigla",
+      "Vícios de linguagem",
+    ],
+  },
 ];
 
 const ContentsSection = () => {
