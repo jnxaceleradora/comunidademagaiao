@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { BookOpen, CheckCircle2, ChevronDown, FileText, Type, Link2, PenTool, MoreHorizontal, GitBranch, Layers, Sparkles, Palette, Network, MessageCircle, Mic } from "lucide-react";
+import { BookOpen, CheckCircle2, ChevronDown, FileText, Link2, PenTool, MoreHorizontal, GitBranch, Layers, Sparkles, Palette, Network, MessageCircle, Mic } from "lucide-react";
 
 const topics = [
   {
@@ -20,7 +20,6 @@ const topics = [
       "Gêneros textuais",
     ],
   },
-  { icon: Type, name: "Classes Gramaticais", neon: "text-neon-lilac" },
   {
     icon: Link2,
     name: "Concordância",
@@ -146,7 +145,7 @@ const ContentsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {topics.map((topic, i) => (
             <motion.button
               key={topic.name}
@@ -157,24 +156,27 @@ const ContentsSection = () => {
               transition={{ duration: 0.4, delay: i * 0.05 }}
               onClick={() => topic.subtopics && setActiveTopic(activeTopic === topic.name ? null : topic.name)}
               aria-expanded={topic.subtopics ? activeTopic === topic.name : undefined}
-              className={`group relative rounded-xl border bg-card p-5 text-center transition-all ${
+              className={`group relative min-h-[168px] overflow-hidden rounded-2xl border bg-gradient-to-br from-card via-card to-primary/[0.08] p-5 text-center transition-all duration-300 ${
                 topic.subtopics
-                  ? "cursor-pointer hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+                  ? "cursor-pointer hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/15"
                   : "cursor-default border-border"
               } ${activeTopic === topic.name ? "border-primary/60 shadow-lg shadow-primary/10" : "border-border"}`}
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/15 transition-colors">
-                <topic.icon className="w-5 h-5 text-primary" />
-              </div>
-              <span className={`inline-flex items-center gap-2 font-heading font-semibold text-base md:text-lg ${topic.neon}`}>
-                {topic.name}
-                {topic.subtopics && (
+              <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-2xl transition-colors group-hover:bg-primary/20" />
+              {topic.subtopics && (
+                <span className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full border border-primary/20 bg-background/45 text-primary backdrop-blur-sm transition-colors group-hover:bg-primary/15">
                   <ChevronDown
-                    className={`h-4 w-4 text-primary transition-transform duration-300 ${
+                    className={`h-4 w-4 transition-transform duration-300 ${
                       activeTopic === topic.name ? "rotate-180" : ""
                     }`}
                   />
-                )}
+                </span>
+              )}
+              <div className="relative mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/25 to-accent/10 shadow-lg shadow-primary/10 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/45 group-hover:shadow-primary/20">
+                <topic.icon className={`h-7 w-7 drop-shadow-[0_0_8px_currentColor] ${topic.neon}`} />
+              </div>
+              <span className={`relative inline-flex items-center font-heading font-semibold text-base leading-snug md:text-lg ${topic.neon}`}>
+                {topic.name}
               </span>
             </motion.button>
           ))}
