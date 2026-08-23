@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import heroBanner from "@/assets/banner-mapas-mentais-marcela.png";
+import marcelaLogo from "@/assets/logo-marcela-neon.png";
 
 const HeroSection = () => {
   return (
@@ -12,6 +13,15 @@ const HeroSection = () => {
       </div>
 
       <div className="container-narrow relative z-10">
+        <motion.img
+          src={marcelaLogo}
+          alt="Logo CM"
+          initial={{ opacity: 0, scale: 0.88 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mb-6 h-24 w-24 rounded-full object-cover shadow-lg shadow-primary/25 md:h-28 md:w-28"
+        />
+
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
