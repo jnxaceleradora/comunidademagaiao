@@ -39,7 +39,9 @@ const HeroSection = () => {
                   Método Magaião
                 </span>
                 <h1 className="mb-6 font-heading text-4xl font-extrabold leading-[1.03] tracking-tight md:text-6xl lg:text-7xl">
-                  <span className="text-neon-cyan">Você não precisa estudar Português por horas</span>{" "}
+                  <span className="text-neon-cyan">Você não precisa estudar</span>{" "}
+                  <span className="text-neon-yellow">Português</span>{" "}
+                  <span className="text-neon-cyan">por horas</span>{" "}
                   <span className="text-neon-pink">para aprender de verdade.</span>
                 </h1>
                 <p className="mx-auto max-w-2xl text-lg leading-relaxed text-foreground/90 md:text-xl lg:mx-0">
