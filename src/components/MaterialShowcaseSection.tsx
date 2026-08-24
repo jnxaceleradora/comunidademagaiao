@@ -27,9 +27,7 @@ const MaterialShowcaseSection = () => {
           className="text-center mb-14"
         >
           <h2 className="section-title">
-            <span className="text-neon-cyan">Veja</span>{" "}
-            <span className="text-neon-pink">como é</span>{" "}
-            <span className="text-neon-yellow">nosso material</span>
+            <span className="text-neon-lilac">Veja como é nosso material</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Mapas mentais coloridos, visuais e prontos para acelerar sua revisão.
