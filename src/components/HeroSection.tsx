@@ -52,26 +52,14 @@ const HeroSection = () => {
           className="text-center max-w-3xl mx-auto"
         >
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-            <span className="text-neon-pink">Pare</span>{" "}
-            <span className="text-neon-yellow">de estudar</span>{" "}
-            <span className="text-neon-cyan">Português</span>{" "}
-            <span className="text-neon-pink">do jeito</span>{" "}
-            <span className="text-neon-yellow">errado!</span>
+            <span className="text-neon-pink">Você estuda por horas,</span>{" "}
+            <span className="text-neon-cyan">mas esquece</span>{" "}
+            <span className="text-neon-yellow">quase tudo depois?</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-            Mapas mentais estratégicos que organizam, simplificam e aceleram sua preparação para concursos.
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            O problema não é falta de esforço. Sem organização e revisão estratégica, o conteúdo se acumula,
+            a memorização falha e seu desempenho não evolui.
           </p>
-          <motion.a
-            href="https://pay.kiwify.com.br/IFakDkU"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-3 bg-primary text-primary-foreground font-heading font-semibold text-lg px-8 py-4 rounded-lg shadow-lg shadow-primary/40 animate-pulse-btn"
-          >
-            Quero Acessar os Mapas Mentais
-            <ArrowRight className="w-5 h-5" />
-          </motion.a>
         </motion.div>
       </div>
     </section>
