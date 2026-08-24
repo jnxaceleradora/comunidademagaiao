@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import mapaCoerenciaTextual from "@/assets/mapa-coerencia-textual.png";
-import mapaOracoesSubordinadasReduzidas from "@/assets/mapa-oracoes-subordinadas-reduzidas.png";
-import mapaExpressoesProblematicas from "@/assets/mapa-expressoes-problematicas.png";
-import mapaRegenciaNominal from "@/assets/mapa-regencia-nominal.png";
-import mapaTiposDeTexto from "@/assets/mapa-tipos-de-texto.png";
+import mapaCoerenciaTextual from "@/assets/mapa-coerencia-textual.webp";
+import mapaOracoesSubordinadasReduzidas from "@/assets/mapa-oracoes-subordinadas-reduzidas.webp";
+import mapaExpressoesProblematicas from "@/assets/mapa-expressoes-problematicas.webp";
+import mapaRegenciaNominal from "@/assets/mapa-regencia-nominal.webp";
+import mapaTiposDeTexto from "@/assets/mapa-tipos-de-texto.webp";
 
 const images = [
   { src: mapaCoerenciaTextual, alt: "Mapa mental — Coerência Textual" },
@@ -50,6 +50,7 @@ const MaterialShowcaseSection = () => {
                 alt={img.alt}
                 className="w-full h-full block object-contain"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

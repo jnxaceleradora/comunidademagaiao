@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, BookOpen, Target } from "lucide-react";
-import marcelaPhoto from "@/assets/marcela-profissional-source.jpg";
+import marcelaPhoto from "@/assets/marcela-profissional-source.webp";
 
 const stats = [
   {
@@ -53,6 +53,8 @@ const AuthoritySection = () => {
               <img
                 src={marcelaPhoto}
                 alt="Marcela Gaião, professora especialista em Língua Portuguesa"
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 h-full w-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/75 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-background/75" />

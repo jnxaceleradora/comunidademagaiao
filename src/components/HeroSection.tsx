@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import marcelaHeroIntegrada from "@/assets/marcela-hero-integrada.png";
+import marcelaHeroIntegrada from "@/assets/marcela-hero-integrada.webp";
 
 const HeroSection = () => {
   return (
@@ -27,6 +27,8 @@ const HeroSection = () => {
               <img
                 src={marcelaHeroIntegrada}
                 alt="Marcela Gaião, especialista em Língua Portuguesa"
+                decoding="async"
+                fetchPriority="high"
                 className="absolute left-1/2 top-3 h-[430px] w-[112%] -translate-x-1/2 object-contain object-top opacity-40 saturate-75 sm:h-[470px] md:h-[500px] lg:left-auto lg:right-[-7%] lg:top-0 lg:h-full lg:w-[66%] lg:translate-x-0 lg:object-right-bottom lg:opacity-45"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/35 to-background lg:bg-gradient-to-r lg:from-background lg:via-background/75 lg:to-background/10" />
