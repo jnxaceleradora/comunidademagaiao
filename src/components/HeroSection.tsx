@@ -26,13 +26,23 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="mx-auto mb-12 md:mb-16 overflow-hidden rounded-2xl border border-primary/35 shadow-2xl shadow-primary/20"
+          className="relative mx-auto mb-12 md:mb-16 overflow-hidden rounded-2xl border border-primary/35 shadow-2xl shadow-primary/20"
         >
           <img
             src={heroBanner}
             alt="Mapas Mentais de Língua Portuguesa com Marcela Gaião"
             className="block h-auto w-full"
           />
+          <a
+            href="https://pay.kiwify.com.br/IFakDkU"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Quero ter acesso ao curso agora"
+            className="absolute bottom-[4.8%] left-[5.7%] flex h-[10.5%] w-[41.5%] animate-pulse-btn items-center justify-center gap-[2%] rounded-[1.15vw] border border-white/50 bg-primary px-2 font-heading text-[clamp(0.45rem,1.45vw,1.25rem)] font-bold text-white shadow-lg shadow-primary/60 transition hover:brightness-110"
+          >
+            <span>Quero ter acesso ao curso agora</span>
+            <ArrowRight className="h-[1.25em] w-[1.25em] shrink-0" />
+          </a>
         </motion.div>
 
         <motion.div
