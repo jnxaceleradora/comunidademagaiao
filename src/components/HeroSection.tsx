@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import marcelaHeroIntegrada from "@/assets/marcela-hero-integrada.png";
 
 const HeroSection = () => {
@@ -39,7 +40,7 @@ const HeroSection = () => {
                 </span>
                 <h1 className="mb-6 font-heading text-4xl font-extrabold leading-[1.03] tracking-tight md:text-6xl lg:text-7xl">
                   <span className="text-neon-cyan">Você não precisa estudar Português por horas</span>{" "}
-                  <span className="text-neon-yellow">para aprender de verdade.</span>
+                  <span className="text-neon-pink">para aprender de verdade.</span>
                 </h1>
                 <p className="mx-auto max-w-2xl text-lg leading-relaxed text-foreground/90 md:text-xl lg:mx-0">
                   Você precisa de um método que organize o conteúdo, facilite a memorização e mostre com clareza
@@ -49,6 +50,20 @@ const HeroSection = () => {
             </div>
           </div>
         </motion.div>
+
+        <div className="mt-8 flex justify-center md:mt-10">
+          <motion.a
+            href="https://pay.kiwify.com.br/IFakDkU"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex animate-pulse-btn items-center gap-3 rounded-xl bg-primary px-8 py-4 font-heading text-base font-bold text-primary-foreground shadow-lg shadow-primary/45 md:px-12 md:py-5 md:text-xl"
+          >
+            Quero ter acesso aos mapas agora
+            <ArrowRight className="h-5 w-5 shrink-0" />
+          </motion.a>
+        </div>
 
       </div>
     </section>
