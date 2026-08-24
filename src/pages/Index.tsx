@@ -7,7 +7,6 @@ import MaterialShowcaseSection from "@/components/MaterialShowcaseSection";
 import AuthoritySection from "@/components/AuthoritySection";
 import AudienceSection from "@/components/AudienceSection";
 import CTASection from "@/components/CTASection";
-import OtherCoursesSection from "@/components/OtherCoursesSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import FooterSection from "@/components/FooterSection";
@@ -25,7 +24,6 @@ const Index = () => {
       <AudienceSection />
       <BenefitsSection />
       <CTASection />
-      <OtherCoursesSection />
       <GuaranteeSection />
       <FooterSection />
     </main>
