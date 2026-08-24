@@ -37,10 +37,10 @@ const HeroSection = () => {
             href="https://pay.kiwify.com.br/IFakDkU"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Quero ter acesso ao curso agora"
+            aria-label="Quero ter acesso aos mapas agora"
             className="absolute bottom-[6.5%] left-[6%] flex h-[11.3%] w-[42.4%] animate-pulse-btn items-center justify-center gap-[2%] rounded-[1.35vw] bg-primary px-2 font-heading text-[clamp(0.45rem,1.45vw,1.25rem)] font-bold text-white shadow-lg shadow-primary/70 transition hover:brightness-110"
           >
-            <span>Quero ter acesso ao curso agora</span>
+            <span>Quero ter acesso aos mapas agora</span>
             <ArrowRight className="h-[1.25em] w-[1.25em] shrink-0" />
           </a>
         </motion.div>
