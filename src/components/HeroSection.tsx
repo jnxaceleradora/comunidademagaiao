@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import heroBanner from "@/assets/banner-mapas-mentais-marcela.png";
 import marcelaEditorial from "@/assets/marcela-editorial-v2.png";
 
 const HeroSection = () => {
@@ -17,7 +15,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="relative mb-12 overflow-hidden rounded-[2rem] border border-primary/35 bg-gradient-to-br from-[#160920] via-[#0b0717] to-[#07132d] shadow-2xl shadow-primary/20 md:mb-16"
+          className="relative overflow-hidden rounded-[2rem] border border-primary/35 bg-gradient-to-br from-[#160920] via-[#0b0717] to-[#07132d] shadow-2xl shadow-primary/20"
         >
           <div className="pointer-events-none absolute -left-20 top-1/4 h-72 w-72 rounded-full bg-primary/20 blur-[100px]" />
           <div className="pointer-events-none absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-accent/20 blur-[100px]" />
@@ -48,28 +46,6 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative mx-auto mb-12 md:mb-16 overflow-hidden rounded-2xl border border-primary/35 shadow-2xl shadow-primary/20"
-        >
-          <img
-            src={heroBanner}
-            alt="Mapas Mentais de Língua Portuguesa com Marcela Gaião"
-            className="block h-auto w-full"
-          />
-          <a
-            href="https://pay.kiwify.com.br/IFakDkU"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Quero ter acesso aos mapas agora"
-            className="absolute bottom-[6.5%] left-[6%] flex h-[11.3%] w-[42.4%] animate-pulse-btn items-center justify-center gap-[2%] rounded-[1.35vw] bg-primary px-2 font-heading text-[clamp(0.45rem,1.45vw,1.25rem)] font-bold text-white shadow-lg shadow-primary/70 transition hover:brightness-110"
-          >
-            <span>Quero ter acesso aos mapas agora</span>
-            <ArrowRight className="h-[1.25em] w-[1.25em] shrink-0" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
