@@ -10,7 +10,7 @@ const GuaranteeSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mx-auto text-center bg-card border border-border rounded-2xl p-8 md:p-12"
+          className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-5 text-center sm:p-8 md:p-12"
         >
           <ShieldCheck className="w-12 h-12 text-primary mx-auto mb-5" />
           <h3 className="font-heading text-2xl font-bold mb-3">

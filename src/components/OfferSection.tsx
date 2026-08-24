@@ -56,7 +56,7 @@ const OfferSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative max-w-3xl mx-auto rounded-3xl border border-primary/40 bg-card p-8 md:p-12 text-center overflow-hidden"
+          className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-primary/40 bg-card p-5 text-center sm:p-8 md:p-12"
         >
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-primary/25 blur-[110px]" />
@@ -78,19 +78,19 @@ const OfferSection = () => {
 
             <div className="flex flex-col items-center gap-1 mb-8">
               <span className="text-muted-foreground text-lg line-through">De R$ 114,00</span>
-              <div className="font-heading text-4xl md:text-6xl font-bold text-neon-cyan">
+              <div className="font-heading text-3xl font-bold text-neon-cyan sm:text-4xl md:text-6xl">
                 Por R$ 57,00
               </div>
               <span className="text-foreground/80 text-base md:text-lg">à vista</span>
             </div>
 
-            <div className="flex justify-center gap-3 md:gap-5 mb-8">
+            <div className="mb-8 flex justify-center gap-2 sm:gap-3 md:gap-5">
               {units.map((u) => (
                 <div
                   key={u.label}
-                  className="bg-background/70 border border-primary/30 rounded-xl px-4 py-3 md:px-6 md:py-4 min-w-[80px] md:min-w-[100px]"
+                  className="min-w-0 flex-1 rounded-xl border border-primary/30 bg-background/70 px-2 py-3 sm:max-w-[100px] sm:px-4 md:px-6 md:py-4"
                 >
-                  <div className="font-heading text-3xl md:text-5xl font-bold text-neon-pink tabular-nums">
+                  <div className="font-heading text-2xl font-bold text-neon-pink tabular-nums sm:text-3xl md:text-5xl">
                     {u.value}
                   </div>
                   <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider mt-1">
@@ -106,7 +106,7 @@ const OfferSection = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-3 bg-primary text-primary-foreground font-heading font-semibold text-lg px-10 py-5 rounded-lg shadow-lg shadow-primary/40 animate-pulse-btn"
+              className="inline-flex w-full max-w-sm animate-pulse-btn items-center justify-center gap-3 rounded-lg bg-primary px-5 py-4 font-heading text-base font-semibold text-primary-foreground shadow-lg shadow-primary/40 sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
             >
               Aproveitar a Oferta
               <ArrowRight className="w-5 h-5" />

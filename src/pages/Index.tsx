@@ -13,7 +13,7 @@ import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
   return (
-    <main className="pt-16">
+    <main>
       <Header />
       <HeroSection />
       <SolutionSection />

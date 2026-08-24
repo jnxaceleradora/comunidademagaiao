@@ -27,7 +27,7 @@ const CTASection = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-3 bg-primary text-primary-foreground font-heading font-semibold text-lg px-10 py-5 rounded-lg shadow-lg shadow-primary/25 animate-pulse-btn"
+            className="inline-flex w-full max-w-sm animate-pulse-btn items-center justify-center gap-3 rounded-lg bg-primary px-5 py-4 font-heading text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
           >
             Garantir Acesso Agora
             <ArrowRight className="w-5 h-5" />

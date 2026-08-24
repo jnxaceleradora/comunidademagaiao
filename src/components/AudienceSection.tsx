@@ -33,7 +33,7 @@ const AudienceSection = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex animate-pulse-btn items-center gap-3 rounded-xl bg-primary px-9 py-4 font-heading text-lg font-bold text-primary-foreground shadow-lg shadow-primary/40 md:px-12 md:py-5 md:text-xl"
+            className="inline-flex w-full max-w-sm animate-pulse-btn items-center justify-center gap-3 rounded-xl bg-primary px-5 py-4 text-center font-heading text-base font-bold text-primary-foreground shadow-lg shadow-primary/40 sm:w-auto sm:px-9 sm:text-lg md:px-12 md:py-5 md:text-xl"
           >
             Quero ter acesso agora
             <ArrowRight className="h-5 w-5" />

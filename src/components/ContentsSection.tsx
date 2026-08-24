@@ -143,7 +143,7 @@ const ContentsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {topics.map((topic, i) => (
             <motion.button
               key={topic.name}
@@ -154,7 +154,7 @@ const ContentsSection = () => {
               transition={{ duration: 0.4, delay: i * 0.05 }}
               onClick={() => topic.subtopics && setActiveTopic(activeTopic === topic.name ? null : topic.name)}
               aria-expanded={topic.subtopics ? activeTopic === topic.name : undefined}
-              className={`group relative min-h-[168px] overflow-hidden rounded-2xl border bg-gradient-to-br from-card via-card to-primary/[0.08] p-5 text-center transition-all duration-300 ${
+              className={`group relative min-h-[145px] overflow-hidden rounded-2xl border bg-gradient-to-br from-card via-card to-primary/[0.08] p-4 text-center transition-all duration-300 sm:min-h-[168px] sm:p-5 ${
                 topic.subtopics
                   ? "cursor-pointer hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/15"
                   : "cursor-default border-border"
