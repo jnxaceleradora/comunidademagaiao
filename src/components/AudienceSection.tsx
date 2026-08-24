@@ -5,19 +5,19 @@ const audiences = [
     emoji: "🧠",
     highlight: "Estudante",
     highlightClass: "text-neon-cyan",
-    rest: " que busca facilitar os estudos.",
+    rest: " que quer compreender Português com clareza, revisar mais rápido e aprender de verdade.",
   },
   {
     emoji: "📝",
     highlight: "Concurseiro",
     highlightClass: "text-neon-pink",
-    rest: " que busca um material de revisão eficiente e com linguagem simplificada.",
+    rest: " que precisa revisar o que mais cai, memorizar melhor e chegar à prova com segurança.",
   },
   {
     emoji: "👩‍🏫",
     highlight: "Professor",
     highlightClass: "text-neon-yellow",
-    rest: " que deseja ter um material facilitado que o auxilie em sala de aula.",
+    rest: " que busca recursos visuais prontos para explicar conteúdos complexos e enriquecer suas aulas.",
   },
 ];
 
@@ -35,7 +35,7 @@ const AudienceSection = () => {
           <h2 className="section-title">
             <span className="text-neon-pink">Este</span>{" "}
             <span className="text-neon-cyan">curso</span>{" "}
-            <span className="text-neon-yellow">é para você que...</span>
+            <span className="text-neon-yellow">é para você...</span>
           </h2>
         </motion.div>
 
