@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import marcelaHeroRosa from "@/assets/marcela-hero-rosa.jpg";
+import marcelaHeroIntegrada from "@/assets/marcela-hero-integrada.png";
 
 const HeroSection = () => {
   return (
@@ -15,13 +15,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="relative overflow-hidden rounded-[2rem] border border-primary/35 bg-gradient-to-br from-[#160920] via-[#0b0717] to-[#07132d] shadow-2xl shadow-primary/20"
+          className="relative"
         >
-          <div className="pointer-events-none absolute -left-20 top-1/4 h-72 w-72 rounded-full bg-primary/20 blur-[100px]" />
-          <div className="pointer-events-none absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-accent/20 blur-[100px]" />
+          <div className="pointer-events-none absolute -left-24 top-1/3 h-80 w-80 rounded-full bg-primary/15 blur-[120px]" />
+          <div className="pointer-events-none absolute -right-20 top-1/4 h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-[130px]" />
 
-          <div className="relative grid items-stretch lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="order-2 px-7 py-10 text-center md:px-12 md:py-14 lg:order-1 lg:flex lg:flex-col lg:justify-center lg:px-16 lg:text-left">
+          <div className="relative grid items-center lg:min-h-[650px] lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="order-2 px-3 pb-4 pt-8 text-center md:px-10 lg:order-1 lg:flex lg:flex-col lg:justify-center lg:px-10 lg:py-14 lg:text-left">
               <span className="mb-6 hidden w-fit rounded-full border border-primary/50 bg-primary/10 px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.18em] text-neon-pink md:text-sm lg:inline-flex">
                 Método Magaião
               </span>
@@ -35,14 +35,15 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="relative order-1 h-[470px] overflow-hidden border-b border-primary/20 lg:order-2 lg:h-[650px] lg:border-b-0 lg:border-l">
+            <div className="relative order-1 h-[470px] lg:order-2 lg:h-[650px]">
+              <div className="pointer-events-none absolute inset-x-[12%] bottom-[8%] h-[64%] rounded-full bg-gradient-to-br from-primary/30 via-purple-600/20 to-accent/30 blur-[55px]" />
               <img
-                src={marcelaHeroRosa}
+                src={marcelaHeroIntegrada}
                 alt="Marcela Gaião, especialista em Língua Portuguesa"
-                className="h-full w-full object-cover object-top"
+                className="relative z-10 h-full w-full object-contain object-bottom drop-shadow-[0_24px_45px_rgba(0,0,0,0.45)]"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/55 via-transparent to-transparent lg:bg-gradient-to-r lg:from-background/20 lg:via-transparent lg:to-transparent" />
-              <span className="absolute left-5 top-5 inline-flex rounded-full border border-primary/60 bg-background/80 px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.16em] text-neon-pink shadow-lg shadow-primary/20 backdrop-blur-md lg:hidden">
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-20 bg-gradient-to-t from-background to-transparent" />
+              <span className="absolute left-1/2 top-3 z-20 inline-flex -translate-x-1/2 rounded-full border border-primary/60 bg-background/75 px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.16em] text-neon-pink shadow-lg shadow-primary/20 backdrop-blur-md lg:hidden">
                 Método Magaião
               </span>
             </div>
