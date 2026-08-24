@@ -71,7 +71,7 @@ const OfferSection = () => {
               </span>
             </div>
 
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4 leading-tight">
+            <h2 className="section-title">
               <span className="text-neon-pink">50% OFF</span>{" "}
               <span className="text-neon-yellow">só hoje</span>
             </h2>

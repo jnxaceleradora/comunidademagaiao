@@ -32,7 +32,7 @@ const AudienceSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="section-title">
             <span className="text-neon-pink">Este</span>{" "}
             <span className="text-neon-cyan">curso</span>{" "}
             <span className="text-neon-yellow">é para você que...</span>

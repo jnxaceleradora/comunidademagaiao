@@ -38,7 +38,7 @@ const ProblemSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="section-title">
             <span className="text-neon-pink">Por que você estuda</span>{" "}
             <span className="text-neon-yellow">e mesmo assim</span>{" "}
             <span className="text-neon-cyan">não evolui?</span>

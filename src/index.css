@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -45,7 +45,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --font-heading: 'Manrope', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
   }
 }
@@ -78,6 +78,10 @@
     @apply max-w-6xl mx-auto;
   }
 
+  .section-title {
+    @apply mb-5 font-heading text-4xl font-extrabold leading-[1.08] tracking-[-0.035em] md:text-5xl lg:text-[3.5rem];
+  }
+
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(327 100% 65%), hsl(189 82% 60%));
@@ -105,9 +109,12 @@
   }
 
   h1 .text-neon-pink, h1 .text-neon-cyan, h1 .text-neon-yellow, h1 .text-neon-lilac, h1 .text-neon-blue,
-  h2 .text-neon-pink, h2 .text-neon-cyan, h2 .text-neon-yellow, h2 .text-neon-lilac, h2 .text-neon-blue,
   h3 .text-neon-pink, h3 .text-neon-cyan, h3 .text-neon-yellow, h3 .text-neon-lilac, h3 .text-neon-blue {
     font-weight: 500;
+  }
+
+  h2 .text-neon-pink, h2 .text-neon-cyan, h2 .text-neon-yellow, h2 .text-neon-lilac, h2 .text-neon-blue {
+    font-weight: 800;
   }
 
   .bg-pattern {

@@ -13,7 +13,7 @@ const CTASection = () => {
           className="text-center max-w-2xl mx-auto"
         >
           <Sparkles className="w-8 h-8 text-primary mx-auto mb-6" />
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          <h2 className="section-title">
             <span className="text-neon-cyan">Estude com clareza.</span><br />
             <span className="text-neon-pink">Revise com estratégia.</span><br />
             <span className="text-neon-yellow">Evolua com método.</span>
