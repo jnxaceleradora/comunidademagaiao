@@ -4,7 +4,7 @@ import { Zap, Printer, Laptop, RefreshCw, Infinity as InfinityIcon } from "lucid
 const benefits = [
   {
     icon: Zap,
-    title: "Envio imediato",
+    title: "Acesso imediato",
     titleClass: "text-neon-pink",
     description: "Receba seus mapas mentais no ato da compra, sem espera.",
   },
