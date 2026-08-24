@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import heroBanner from "@/assets/banner-mapas-mentais-marcela.png";
-import marcelaLogo from "@/assets/logo-marcela-neon.png";
+import marcelaEditorial from "@/assets/marcela-editorial-v2.png";
 
 const HeroSection = () => {
   return (
@@ -13,14 +13,40 @@ const HeroSection = () => {
       </div>
 
       <div className="container-narrow relative z-10">
-        <motion.img
-          src={marcelaLogo}
-          alt="Logo CM"
-          initial={{ opacity: 0, scale: 0.88 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto mb-6 h-24 w-24 rounded-full object-cover shadow-lg shadow-primary/25 md:h-28 md:w-28"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative mb-12 overflow-hidden rounded-[2rem] border border-primary/35 bg-gradient-to-br from-[#160920] via-[#0b0717] to-[#07132d] shadow-2xl shadow-primary/20 md:mb-16"
+        >
+          <div className="pointer-events-none absolute -left-20 top-1/4 h-72 w-72 rounded-full bg-primary/20 blur-[100px]" />
+          <div className="pointer-events-none absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-accent/20 blur-[100px]" />
+
+          <div className="relative grid items-center lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="px-7 py-10 text-center md:px-12 md:py-14 lg:px-16 lg:text-left">
+              <span className="mb-6 inline-flex rounded-full border border-primary/50 bg-primary/10 px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.18em] text-neon-pink md:text-sm">
+                Método Mapas Mentais
+              </span>
+              <h1 className="mb-6 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
+                <span className="text-neon-cyan">Você não precisa estudar Português por horas</span>{" "}
+                <span className="text-neon-yellow">para aprender de verdade.</span>
+              </h1>
+              <p className="mx-auto max-w-xl text-lg leading-relaxed text-foreground/85 md:text-xl lg:mx-0">
+                Você precisa de um método que organize o conteúdo, facilite a memorização e mostre com clareza
+                o que realmente importa na hora da prova.
+              </p>
+            </div>
+
+            <div className="relative h-[470px] overflow-hidden border-t border-primary/20 lg:h-[650px] lg:border-l lg:border-t-0">
+              <img
+                src={marcelaEditorial}
+                alt="Marcela Gaião, especialista em Língua Portuguesa"
+                className="h-full w-full object-cover object-top"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
+            </div>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -43,21 +69,6 @@ const HeroSection = () => {
             <span>Quero ter acesso aos mapas agora</span>
             <ArrowRight className="h-[1.25em] w-[1.25em] shrink-0" />
           </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-center max-w-3xl mx-auto"
-        >
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-            <span className="text-neon-cyan">Você estuda por horas, mas esquece quase tudo depois?</span>
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            O problema não é falta de esforço. Sem organização e revisão estratégica, o conteúdo se acumula,
-            a memorização falha e seu desempenho não evolui.
-          </p>
         </motion.div>
       </div>
     </section>
