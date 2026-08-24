@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import marcelaEditorial from "@/assets/marcela-editorial-v2.png";
+import marcelaHeroRosa from "@/assets/marcela-hero-rosa.jpg";
 
 const HeroSection = () => {
   return (
@@ -20,10 +20,10 @@ const HeroSection = () => {
           <div className="pointer-events-none absolute -left-20 top-1/4 h-72 w-72 rounded-full bg-primary/20 blur-[100px]" />
           <div className="pointer-events-none absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-accent/20 blur-[100px]" />
 
-          <div className="relative grid items-center lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="px-7 py-10 text-center md:px-12 md:py-14 lg:px-16 lg:text-left">
-              <span className="mb-6 inline-flex rounded-full border border-primary/50 bg-primary/10 px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.18em] text-neon-pink md:text-sm">
-                Método Mapas Mentais
+          <div className="relative grid items-stretch lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="order-2 px-7 py-10 text-center md:px-12 md:py-14 lg:order-1 lg:flex lg:flex-col lg:justify-center lg:px-16 lg:text-left">
+              <span className="mb-6 hidden w-fit rounded-full border border-primary/50 bg-primary/10 px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.18em] text-neon-pink md:text-sm lg:inline-flex">
+                Método Magaião
               </span>
               <h1 className="mb-6 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
                 <span className="text-neon-cyan">Você não precisa estudar Português por horas</span>{" "}
@@ -35,13 +35,16 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="relative h-[470px] overflow-hidden border-t border-primary/20 lg:h-[650px] lg:border-l lg:border-t-0">
+            <div className="relative order-1 h-[470px] overflow-hidden border-b border-primary/20 lg:order-2 lg:h-[650px] lg:border-b-0 lg:border-l">
               <img
-                src={marcelaEditorial}
+                src={marcelaHeroRosa}
                 alt="Marcela Gaião, especialista em Língua Portuguesa"
                 className="h-full w-full object-cover object-top"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/55 via-transparent to-transparent lg:bg-gradient-to-r lg:from-background/20 lg:via-transparent lg:to-transparent" />
+              <span className="absolute left-5 top-5 inline-flex rounded-full border border-primary/60 bg-background/80 px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.16em] text-neon-pink shadow-lg shadow-primary/20 backdrop-blur-md lg:hidden">
+                Método Magaião
+              </span>
             </div>
           </div>
         </motion.div>
