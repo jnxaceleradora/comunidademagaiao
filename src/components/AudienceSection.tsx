@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const audiences = [
   {
@@ -25,6 +26,20 @@ const AudienceSection = () => {
   return (
     <section id="audiencia" className="section-padding">
       <div className="container-narrow">
+        <div className="mb-12 flex justify-center">
+          <motion.a
+            href="https://pay.kiwify.com.br/IFakDkU"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex animate-pulse-btn items-center gap-3 rounded-xl bg-primary px-9 py-4 font-heading text-lg font-bold text-primary-foreground shadow-lg shadow-primary/40 md:px-12 md:py-5 md:text-xl"
+          >
+            Quero ter acesso agora
+            <ArrowRight className="h-5 w-5" />
+          </motion.a>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
