@@ -40,10 +40,7 @@ const SolutionSection = () => {
           className="text-center mb-14"
         >
           <h2 className="section-title">
-            <span className="text-neon-pink">A forma</span>{" "}
-            <span className="text-neon-yellow">inteligente</span>{" "}
-            <span className="text-neon-pink">de</span>{" "}
-            <span className="text-neon-cyan">estudar Português</span>
+            <span className="text-neon-pink">A forma inteligente de estudar Português</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Mapas mentais transformam conteúdo denso em estruturas visuais que seu cérebro adora.
