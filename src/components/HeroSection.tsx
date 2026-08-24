@@ -52,9 +52,7 @@ const HeroSection = () => {
           className="text-center max-w-3xl mx-auto"
         >
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-            <span className="text-neon-pink">Você estuda por horas,</span>{" "}
-            <span className="text-neon-cyan">mas esquece</span>{" "}
-            <span className="text-neon-yellow">quase tudo depois?</span>
+            <span className="text-neon-cyan">Você estuda por horas, mas esquece quase tudo depois?</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             O problema não é falta de esforço. Sem organização e revisão estratégica, o conteúdo se acumula,
