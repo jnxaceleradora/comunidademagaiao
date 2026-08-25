@@ -89,8 +89,8 @@ export default {
           "100%": { transform: "translateX(-50%)" },
         },
         "pulse-btn": {
-          "0%, 100%": { transform: "scale(1)", boxShadow: "0 0 0 0 hsl(var(--primary) / 0.55)" },
-          "50%": { transform: "scale(1.04)", boxShadow: "0 0 0 14px hsl(var(--primary) / 0)" },
+          "0%, 100%": { transform: "scale(1)", boxShadow: "0 0 0 0 rgb(34 197 94 / 0.55)" },
+          "50%": { transform: "scale(1.04)", boxShadow: "0 0 0 14px rgb(34 197 94 / 0)" },
         },
       },
       animation: {

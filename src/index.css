@@ -133,6 +133,15 @@
   .connector-line {
     background: linear-gradient(90deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.05));
   }
+
+  .animate-pulse-btn {
+    background-color: #22c55e !important;
+    --tw-shadow-color: rgb(34 197 94 / 0.45) !important;
+  }
+
+  .animate-pulse-btn:hover {
+    background-color: #16a34a !important;
+  }
 }
 
 @media (max-width: 767px) {
