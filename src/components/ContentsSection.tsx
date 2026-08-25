@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, BookOpen, CheckCircle2, ChevronDown, FileText, Link2, PenTool, MoreHorizontal, GitBranch, Layers, Sparkles, Palette, Network, MessageCircle, Mic } from "lucide-react";
 
@@ -142,18 +142,15 @@ const ContentsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 items-start gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-flow-row-dense grid-cols-2 items-start gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
           {topics.map((topic, i) => (
-            <motion.div
-              key={topic.name}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="min-w-0"
-            >
-              <button
+            <Fragment key={topic.name}>
+              <motion.button
                 type="button"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
                 onClick={() => topic.subtopics && setActiveTopic(activeTopic === topic.name ? null : topic.name)}
                 aria-expanded={topic.subtopics ? activeTopic === topic.name : undefined}
                 aria-controls={topic.subtopics ? `subtopics-${i}` : undefined}
@@ -179,7 +176,7 @@ const ContentsSection = () => {
                 <span className={`relative inline-flex items-center font-heading text-sm font-semibold leading-snug sm:text-base md:text-lg ${topic.neon}`}>
                   {topic.name}
                 </span>
-              </button>
+              </motion.button>
 
               <AnimatePresence initial={false}>
                 {activeTopic === topic.name && topic.subtopics && (
@@ -189,7 +186,7 @@ const ContentsSection = () => {
                     animate={{ opacity: 1, height: "auto", y: 0 }}
                     exit={{ opacity: 0, height: 0, y: -8 }}
                     transition={{ duration: 0.25 }}
-                    className="overflow-hidden"
+                    className="col-span-2 overflow-hidden md:col-span-3 lg:col-span-4"
                   >
                     <div className="mt-3 space-y-2 rounded-2xl border border-primary/30 bg-gradient-to-br from-card via-card to-primary/10 p-3 shadow-lg shadow-primary/5 sm:p-4">
                       {topic.subtopics.map((subtopic) => (
@@ -207,7 +204,7 @@ const ContentsSection = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </Fragment>
           ))}
         </div>
 
