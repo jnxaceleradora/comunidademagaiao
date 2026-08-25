@@ -41,7 +41,7 @@ const SolutionSection = () => {
         >
           <h2 className="section-title">
             <span className="text-neon-pink">A forma </span>
-            <span className="text-neon-blue">inteligente</span>
+            <span className="text-neon-cyan">inteligente</span>
             <span className="text-neon-pink"> de estudar </span>
             <span className="text-neon-yellow">Português</span>
           </h2>
