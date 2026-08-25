@@ -71,17 +71,13 @@ const OfferSection = () => {
               </span>
             </div>
 
-            <h2 className="section-title">
-              <span className="text-neon-pink">50% OFF</span>{" "}
-              <span className="text-neon-yellow">só hoje</span>
-            </h2>
-
             <div className="flex flex-col items-center gap-1 mb-8">
               <span className="text-muted-foreground text-lg line-through">De R$ 114,00</span>
               <div className="font-heading text-3xl font-bold text-neon-cyan sm:text-4xl md:text-6xl">
                 Por R$ 57,00
               </div>
               <span className="text-foreground/80 text-base md:text-lg">à vista</span>
+              <span className="text-foreground/80 text-base font-medium md:text-lg">ou 12x de R$ 5,90</span>
             </div>
 
             <div className="mb-8 flex justify-center gap-2 sm:gap-3 md:gap-5">
