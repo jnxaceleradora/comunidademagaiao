@@ -142,7 +142,7 @@ const ContentsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 items-start gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 items-start gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
           {topics.map((topic, i) => (
             <motion.div
               key={topic.name}
@@ -157,7 +157,7 @@ const ContentsSection = () => {
                 onClick={() => topic.subtopics && setActiveTopic(activeTopic === topic.name ? null : topic.name)}
                 aria-expanded={topic.subtopics ? activeTopic === topic.name : undefined}
                 aria-controls={topic.subtopics ? `subtopics-${i}` : undefined}
-                className={`group relative w-full min-h-[145px] overflow-hidden rounded-2xl border bg-gradient-to-br from-card via-card to-primary/[0.08] p-4 text-center transition-all duration-300 sm:min-h-[168px] sm:p-5 ${
+                className={`group relative min-h-[140px] w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-card via-card to-primary/[0.08] p-3 text-center transition-all duration-300 sm:min-h-[168px] sm:p-5 ${
                   topic.subtopics
                     ? "cursor-pointer hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/15"
                     : "cursor-default border-border"
@@ -165,7 +165,7 @@ const ContentsSection = () => {
               >
                 <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-2xl transition-colors group-hover:bg-primary/20" />
                 {topic.subtopics && (
-                  <span className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full border border-primary/20 bg-background/45 text-primary backdrop-blur-sm transition-colors group-hover:bg-primary/15">
+                  <span className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full border border-primary/20 bg-background/45 text-primary backdrop-blur-sm transition-colors group-hover:bg-primary/15 sm:right-3 sm:top-3 sm:h-8 sm:w-8">
                     <ChevronDown
                       className={`h-4 w-4 transition-transform duration-300 ${
                         activeTopic === topic.name ? "rotate-180" : ""
@@ -173,10 +173,10 @@ const ContentsSection = () => {
                     />
                   </span>
                 )}
-                <div className="relative mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/25 to-accent/10 shadow-lg shadow-primary/10 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/45 group-hover:shadow-primary/20">
-                  <topic.icon className={`h-7 w-7 drop-shadow-[0_0_8px_currentColor] ${topic.neon}`} />
+                <div className="relative mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/25 to-accent/10 shadow-lg shadow-primary/10 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/45 group-hover:shadow-primary/20 sm:mb-4 sm:h-14 sm:w-14">
+                  <topic.icon className={`h-6 w-6 drop-shadow-[0_0_8px_currentColor] sm:h-7 sm:w-7 ${topic.neon}`} />
                 </div>
-                <span className={`relative inline-flex items-center font-heading font-semibold text-base leading-snug md:text-lg ${topic.neon}`}>
+                <span className={`relative inline-flex items-center font-heading text-sm font-semibold leading-snug sm:text-base md:text-lg ${topic.neon}`}>
                   {topic.name}
                 </span>
               </button>
@@ -195,10 +195,10 @@ const ContentsSection = () => {
                       {topic.subtopics.map((subtopic) => (
                         <div
                           key={subtopic}
-                          className="flex items-start gap-2.5 rounded-xl border border-border/80 bg-background/45 p-3"
+                          className="flex items-start gap-2 rounded-xl border border-border/80 bg-background/45 p-2.5 sm:gap-2.5 sm:p-3"
                         >
                           <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                          <span className="break-words text-sm font-medium leading-relaxed text-foreground/90">
+                          <span className="break-words text-xs font-medium leading-relaxed text-foreground/90 sm:text-sm">
                             {subtopic}
                           </span>
                         </div>
