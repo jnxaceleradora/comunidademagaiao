@@ -135,7 +135,9 @@ const ContentsSection = () => {
           className="text-center mb-14"
         >
           <h2 className="section-title">
-            <span className="text-neon-yellow">O que você vai encontrar</span>
+            <span className="text-neon-cyan">O que você</span>{" "}
+            <span className="text-neon-pink">vai</span>{" "}
+            <span className="text-neon-yellow">encontrar</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             Conteúdos essenciais de Língua Portuguesa mapeados para sua aprovação.
