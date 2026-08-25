@@ -29,7 +29,7 @@ const CTASection = () => {
             whileTap={{ scale: 0.98 }}
             className="inline-flex w-full max-w-sm animate-pulse-btn items-center justify-center gap-3 rounded-lg bg-primary px-5 py-4 font-heading text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
           >
-            Garantir Acesso Agora
+            Garantir meu acesso agora
             <ArrowRight className="w-5 h-5" />
           </motion.a>
         </motion.div>
