@@ -7,8 +7,8 @@ const HeroSection = () => {
     <section className="relative overflow-hidden px-3 pb-12 pt-4 sm:px-4 sm:pt-6 md:px-8 md:pb-20 md:pt-8">
       {/* Ambient neon glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 rounded-full bg-primary/20 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-accent/15 blur-[120px]" />
+        <div className="absolute top-1/4 -left-20 hidden h-96 w-96 rounded-full bg-primary/20 blur-[120px] md:block" />
+        <div className="absolute bottom-0 right-0 hidden h-96 w-96 rounded-full bg-accent/15 blur-[120px] md:block" />
       </div>
 
       <div className="container-narrow relative z-10">
@@ -18,12 +18,12 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <div className="pointer-events-none absolute -left-24 top-1/3 h-80 w-80 rounded-full bg-primary/15 blur-[120px]" />
-          <div className="pointer-events-none absolute -right-20 top-1/4 h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-[130px]" />
+          <div className="pointer-events-none absolute -left-24 top-1/3 hidden h-80 w-80 rounded-full bg-primary/15 blur-[120px] md:block" />
+          <div className="pointer-events-none absolute -right-20 top-1/4 hidden h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-[130px] md:block" />
 
           <div className="relative min-h-[650px] overflow-hidden sm:min-h-[690px] md:min-h-[720px] lg:min-h-[650px]">
             <div className="pointer-events-none absolute inset-0">
-              <div className="absolute inset-x-[8%] top-8 h-[480px] rounded-full bg-gradient-to-br from-primary/20 via-purple-600/15 to-accent/20 blur-[75px] lg:inset-y-[8%] lg:left-auto lg:right-[-3%] lg:h-auto lg:w-[62%]" />
+              <div className="absolute inset-x-[8%] top-8 hidden h-[480px] rounded-full bg-gradient-to-br from-primary/20 via-purple-600/15 to-accent/20 blur-[75px] md:block lg:inset-y-[8%] lg:left-auto lg:right-[-3%] lg:h-auto lg:w-[62%]" />
               <img
                 src={marcelaHeroIntegrada}
                 alt="Marcela Gaião, especialista em Língua Portuguesa"

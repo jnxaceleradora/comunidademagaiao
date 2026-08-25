@@ -134,3 +134,21 @@
     background: linear-gradient(90deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.05));
   }
 }
+
+@media (max-width: 767px) {
+  .animate-pulse-btn,
+  .animate-marquee {
+    animation: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
