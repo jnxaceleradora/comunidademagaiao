@@ -136,8 +136,7 @@
 }
 
 @media (max-width: 767px) {
-  .animate-pulse-btn,
-  .animate-marquee {
+  .animate-pulse-btn {
     animation: none !important;
   }
 }
