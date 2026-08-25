@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { BookOpen, CheckCircle2, ChevronDown, FileText, Link2, PenTool, MoreHorizontal, GitBranch, Layers, Sparkles, Palette, Network, MessageCircle, Mic } from "lucide-react";
+import { ArrowRight, BookOpen, CheckCircle2, ChevronDown, FileText, Link2, PenTool, MoreHorizontal, GitBranch, Layers, Sparkles, Palette, Network, MessageCircle, Mic } from "lucide-react";
 
 const topics = [
   {
@@ -209,6 +209,20 @@ const ContentsSection = () => {
               </AnimatePresence>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center md:mt-14">
+          <motion.a
+            href="https://pay.kiwify.com.br/IFakDkU"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex w-full max-w-sm animate-pulse-btn items-center justify-center gap-3 rounded-xl bg-primary px-5 py-4 text-center font-heading text-base font-bold text-primary-foreground shadow-lg shadow-primary/40 sm:w-auto sm:px-9 sm:text-lg md:px-12 md:py-5 md:text-xl"
+          >
+            Quero ter acesso aos mapas agora
+            <ArrowRight className="h-5 w-5 shrink-0" />
+          </motion.a>
         </div>
       </div>
     </section>
