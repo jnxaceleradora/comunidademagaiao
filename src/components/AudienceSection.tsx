@@ -49,7 +49,7 @@ const AudienceSection = () => {
         >
           <h2 className="section-title">
             <span className="text-neon-pink">Este</span>{" "}
-            <span className="text-neon-cyan">mapa mental</span>{" "}
+            <span className="text-neon-cyan">material</span>{" "}
             <span className="text-neon-yellow">é para você...</span>
           </h2>
         </motion.div>
