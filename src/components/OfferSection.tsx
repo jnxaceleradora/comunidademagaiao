@@ -104,7 +104,7 @@ const OfferSection = () => {
               whileTap={{ scale: 0.98 }}
               className="inline-flex w-full max-w-sm animate-pulse-btn items-center justify-center gap-3 rounded-lg bg-primary px-5 py-4 font-heading text-base font-semibold text-primary-foreground shadow-lg shadow-primary/40 sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
             >
-              Aproveitar a Oferta
+              Aproveitar a oferta
               <ArrowRight className="w-5 h-5" />
             </motion.a>
           </div>
