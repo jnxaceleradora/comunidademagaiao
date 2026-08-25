@@ -23,7 +23,7 @@ const benefits = [
   {
     icon: Rocket,
     title: "Estude com foco no que realmente importa",
-    neon: "text-neon-blue",
+    neon: "text-neon-lilac",
     desc: "Os mapas mentais destacam apenas os conceitos essenciais, eliminando informações desnecessárias e facilitando a compreensão e a resolução de questões.",
   },
 ];
