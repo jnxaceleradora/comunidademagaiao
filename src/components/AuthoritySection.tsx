@@ -68,16 +68,16 @@ const AuthoritySection = () => {
                 <Award className="h-6 w-6 text-primary" />
               </div>
               <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-neon-cyan">
-                Experiência que orienta
+                Minha experiência
               </p>
               <h3 className="mb-6 font-heading text-3xl font-bold text-neon-blue md:text-4xl">
-                Conheça Marcela Gaião
+                Eu sou Marcela Gaião
               </h3>
               <p className="text-base leading-relaxed text-secondary-foreground/90 md:text-lg">
                 Sou professora especialista em Língua Portuguesa e servidora pública concursada há mais de 12 anos. Minha trajetória reúne experiência prática no ensino e na preparação de candidatos para concursos e provas.
               </p>
               <p className="mt-4 text-base leading-relaxed text-secondary-foreground/80 md:text-lg">
-                Ao longo desse percurso, desenvolvi uma metodologia que transforma conteúdos complexos em explicações claras, revisões estratégicas e materiais focados no que realmente é cobrado. Cada conteúdo da Comunidade Magaião nasce desse domínio técnico e da experiência de quem conhece, na prática, o caminho entre o estudo e a aprovação.
+                Ao longo desse percurso, desenvolvi uma metodologia que transforma conteúdos complexos em explicações claras, revisões estratégicas e materiais focados no que realmente é cobrado. Por isso, desenvolvo cada conteúdo da Comunidade Magaião com o domínio técnico e a experiência que adquiri, na prática, orientando alunos no caminho entre o estudo e a aprovação.
               </p>
             </div>
           </div>
