@@ -8,6 +8,7 @@ import AuthoritySection from "@/components/AuthoritySection";
 import AudienceSection from "@/components/AudienceSection";
 import CTASection from "@/components/CTASection";
 import BenefitsSection from "@/components/BenefitsSection";
+import BonusSection from "@/components/BonusSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import FooterSection from "@/components/FooterSection";
 
@@ -23,6 +24,7 @@ const Index = () => {
       <AuthoritySection />
       <AudienceSection />
       <BenefitsSection />
+      <BonusSection />
       <CTASection />
       <GuaranteeSection />
       <FooterSection />
