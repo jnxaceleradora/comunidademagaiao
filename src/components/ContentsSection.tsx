@@ -6,7 +6,6 @@ const topics = [
   {
     icon: FileText,
     name: "Interpretação de Texto",
-    neon: "text-neon-pink",
     subtopics: [
       "Dicas de interpretação",
       "Compreensão x Interpretação",
@@ -23,25 +22,21 @@ const topics = [
   {
     icon: Link2,
     name: "Concordância",
-    neon: "text-neon-yellow",
     subtopics: ["Concordância verbal", "Concordância nominal"],
   },
   {
     icon: PenTool,
     name: "Regência",
-    neon: "text-neon-blue",
     subtopics: ["Regência verbal", "Regência nominal", "Crase"],
   },
   {
     icon: MoreHorizontal,
     name: "Pontuação",
-    neon: "text-neon-lilac",
     subtopics: ["Regras de pontuação", "Uso da vírgula"],
   },
   {
     icon: GitBranch,
     name: "Sintaxe",
-    neon: "text-neon-yellow",
     subtopics: [
       "Sintaxe do período simples",
       "Sintaxe do período composto",
@@ -52,7 +47,6 @@ const topics = [
   {
     icon: Layers,
     name: "Morfologia",
-    neon: "text-neon-blue",
     subtopics: [
       "Morfologia I - substantivo e adjetivo",
       "Morfologia II - classificação dos verbos",
@@ -65,25 +59,21 @@ const topics = [
   {
     icon: Sparkles,
     name: "Estilística",
-    neon: "text-neon-pink",
     subtopics: ["Elementos da comunicação", "Funções da linguagem", "Variação linguística"],
   },
   {
     icon: Palette,
     name: "Figuras de linguagem",
-    neon: "text-neon-lilac",
     subtopics: ["Conotação x Denotação", "Figuras de linguagem"],
   },
   {
     icon: Network,
     name: "Coesão e coerência",
-    neon: "text-neon-yellow",
     subtopics: ["Tipos de coesão", "Tipos de coerência"],
   },
   {
     icon: MessageCircle,
     name: "Semântica",
-    neon: "text-neon-blue",
     subtopics: [
       "Conceitos",
       "Relações de sentido entre as palavras",
@@ -94,7 +84,6 @@ const topics = [
   {
     icon: Mic,
     name: "Fonética e Fonologia",
-    neon: "text-neon-pink",
     subtopics: [
       "Fonética x Fonologia",
       "Fonologia",
@@ -107,7 +96,6 @@ const topics = [
   {
     icon: BookOpen,
     name: "Ortografia",
-    neon: "text-neon-yellow",
     subtopics: [
       "Acentuação gráfica",
       "Uso dos porquês",
@@ -118,6 +106,25 @@ const topics = [
       "Estrangeirismo, abreviação e sigla",
       "Vícios de linguagem",
     ],
+  },
+];
+
+const columnStyles = [
+  {
+    neon: "text-neon-orange",
+    iconBox: "border-orange-400/35 from-orange-400/25 to-orange-400/5 shadow-orange-400/20 group-hover:border-orange-300/55 group-hover:shadow-orange-400/30",
+  },
+  {
+    neon: "text-neon-yellow",
+    iconBox: "border-yellow-300/35 from-yellow-300/25 to-yellow-300/5 shadow-yellow-300/20 group-hover:border-yellow-200/55 group-hover:shadow-yellow-300/30",
+  },
+  {
+    neon: "text-neon-cyan",
+    iconBox: "border-cyan-300/35 from-cyan-300/25 to-cyan-300/5 shadow-cyan-300/20 group-hover:border-cyan-200/55 group-hover:shadow-cyan-300/30",
+  },
+  {
+    neon: "text-neon-lilac",
+    iconBox: "border-purple-300/35 from-purple-300/25 to-purple-300/5 shadow-purple-300/20 group-hover:border-purple-200/55 group-hover:shadow-purple-300/30",
   },
 ];
 
@@ -145,7 +152,10 @@ const ContentsSection = () => {
         </motion.div>
 
         <div className="grid grid-flow-row-dense grid-cols-2 items-start gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
-          {topics.map((topic, i) => (
+          {topics.map((topic, i) => {
+            const columnStyle = columnStyles[i % columnStyles.length];
+
+            return (
             <Fragment key={topic.name}>
               <motion.button
                 type="button"
@@ -172,10 +182,10 @@ const ContentsSection = () => {
                     />
                   </span>
                 )}
-                <div className="relative mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/25 to-accent/10 shadow-lg shadow-primary/10 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/45 group-hover:shadow-primary/20 sm:mb-4 sm:h-14 sm:w-14">
-                  <topic.icon className={`h-6 w-6 drop-shadow-[0_0_8px_currentColor] sm:h-7 sm:w-7 ${topic.neon}`} />
+                <div className={`relative mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border bg-gradient-to-br shadow-lg transition-all duration-300 group-hover:scale-105 sm:mb-4 sm:h-14 sm:w-14 ${columnStyle.iconBox}`}>
+                  <topic.icon className={`h-6 w-6 drop-shadow-[0_0_8px_currentColor] sm:h-7 sm:w-7 ${columnStyle.neon}`} />
                 </div>
-                <span className={`relative inline-flex items-center font-heading text-sm font-semibold leading-snug sm:text-base md:text-lg ${topic.neon}`}>
+                <span className={`relative inline-flex items-center font-heading text-sm font-semibold leading-snug sm:text-base md:text-lg ${columnStyle.neon}`}>
                   {topic.name}
                 </span>
               </motion.button>
@@ -207,7 +217,8 @@ const ContentsSection = () => {
                 )}
               </AnimatePresence>
             </Fragment>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-10 flex justify-center md:mt-14">
