@@ -111,8 +111,8 @@ const topics = [
 
 const columnStyles = [
   {
-    neon: "text-neon-orange",
-    iconBox: "border-orange-400/35 from-orange-400/25 to-orange-400/5 shadow-orange-400/20 group-hover:border-orange-300/55 group-hover:shadow-orange-400/30",
+    neon: "text-neon-pink",
+    iconBox: "border-pink-400/35 from-pink-400/25 to-pink-400/5 shadow-pink-400/20 group-hover:border-pink-300/55 group-hover:shadow-pink-400/30",
   },
   {
     neon: "text-neon-yellow",
