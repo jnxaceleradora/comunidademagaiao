@@ -74,7 +74,7 @@ const AuthoritySection = () => {
                 Eu sou Marcela Gaião
               </h3>
               <p className="text-base leading-relaxed text-secondary-foreground/90 md:text-lg">
-                Professora especialista em Língua Portuguesa e servidora pública concursada há mais de 12 anos, reúno experiência prática no ensino e na preparação de candidatos para concursos e provas.
+                Atuo como professora especialista em Língua Portuguesa e como servidora pública concursada há mais de 12 anos. Ao longo dessa trajetória, acumulei experiência prática no ensino e na preparação de candidatos para concursos e provas.
               </p>
               <p className="mt-4 text-base leading-relaxed text-secondary-foreground/80 md:text-lg">
                 Ao longo desse percurso, desenvolvi uma metodologia que transforma conteúdos complexos em explicações claras, revisões estratégicas e materiais focados no que realmente é cobrado. Por isso, desenvolvo cada conteúdo da Comunidade Magaião com o domínio técnico e a experiência que adquiri, na prática, orientando alunos no caminho entre o estudo e a aprovação.
