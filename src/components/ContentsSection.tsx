@@ -4,84 +4,6 @@ import { ArrowRight, BookOpen, CheckCircle2, ChevronDown, FileText, Link2, PenTo
 
 const topics = [
   {
-    icon: FileText,
-    name: "Interpretação de Texto",
-    subtopics: [
-      "Dicas de interpretação",
-      "Compreensão x Interpretação",
-      "Inferir x Depreender",
-      "Análise do discurso",
-      "Tipos de discurso",
-      "Intertextualidade",
-      "Citação x Paráfrase",
-      "Paródia x Alusão",
-      "Tipologia textual",
-      "Gêneros textuais",
-    ],
-  },
-  {
-    icon: Link2,
-    name: "Concordância",
-    subtopics: ["Concordância verbal", "Concordância nominal"],
-  },
-  {
-    icon: PenTool,
-    name: "Regência",
-    subtopics: ["Regência verbal", "Regência nominal", "Crase"],
-  },
-  {
-    icon: MoreHorizontal,
-    name: "Pontuação",
-    subtopics: ["Regras de pontuação", "Uso da vírgula"],
-  },
-  {
-    icon: GitBranch,
-    name: "Sintaxe",
-    subtopics: [
-      "Sintaxe do período simples",
-      "Sintaxe do período composto",
-      "Orações reduzidas",
-      "Funções do QUE, SE e COMO",
-    ],
-  },
-  {
-    icon: Layers,
-    name: "Morfologia",
-    subtopics: [
-      "Morfologia I - substantivo e adjetivo",
-      "Morfologia II - classificação dos verbos",
-      "Morfologia III - formas nominais dos verbos",
-      "Morfologia IV - tempos e modos verbais",
-      "Morfologia VI - pronomes",
-      "Morfologia VII - artigo, advérbio, conjunção, numeral, preposição e interjeição",
-    ],
-  },
-  {
-    icon: Sparkles,
-    name: "Estilística",
-    subtopics: ["Elementos da comunicação", "Funções da linguagem", "Variação linguística"],
-  },
-  {
-    icon: Palette,
-    name: "Figuras de linguagem",
-    subtopics: ["Conotação x Denotação", "Figuras de linguagem"],
-  },
-  {
-    icon: Network,
-    name: "Coesão e coerência",
-    subtopics: ["Tipos de coesão", "Tipos de coerência"],
-  },
-  {
-    icon: MessageCircle,
-    name: "Semântica",
-    subtopics: [
-      "Conceitos",
-      "Relações de sentido entre as palavras",
-      "Homônimos x Parônimos",
-      "Lista de parônimos",
-    ],
-  },
-  {
     icon: Mic,
     name: "Fonética e Fonologia",
     subtopics: [
@@ -105,6 +27,84 @@ const topics = [
       "Expressões problemáticas",
       "Estrangeirismo, abreviação e sigla",
       "Vícios de linguagem",
+    ],
+  },
+  {
+    icon: MessageCircle,
+    name: "Semântica",
+    subtopics: [
+      "Conceitos",
+      "Relações de sentido entre as palavras",
+      "Homônimos x Parônimos",
+      "Lista de parônimos",
+    ],
+  },
+  {
+    icon: Layers,
+    name: "Morfologia",
+    subtopics: [
+      "Morfologia I - substantivo e adjetivo",
+      "Morfologia II - classificação dos verbos",
+      "Morfologia III - formas nominais dos verbos",
+      "Morfologia IV - tempos e modos verbais",
+      "Morfologia VI - pronomes",
+      "Morfologia VII - artigo, advérbio, conjunção, numeral, preposição e interjeição",
+    ],
+  },
+  {
+    icon: GitBranch,
+    name: "Sintaxe",
+    subtopics: [
+      "Sintaxe do período simples",
+      "Sintaxe do período composto",
+      "Orações reduzidas",
+      "Funções do QUE, SE e COMO",
+    ],
+  },
+  {
+    icon: Link2,
+    name: "Concordância",
+    subtopics: ["Concordância verbal", "Concordância nominal"],
+  },
+  {
+    icon: PenTool,
+    name: "Regência",
+    subtopics: ["Regência verbal", "Regência nominal", "Crase"],
+  },
+  {
+    icon: MoreHorizontal,
+    name: "Pontuação",
+    subtopics: ["Regras de pontuação", "Uso da vírgula"],
+  },
+  {
+    icon: Palette,
+    name: "Figuras de linguagem",
+    subtopics: ["Conotação x Denotação", "Figuras de linguagem"],
+  },
+  {
+    icon: Sparkles,
+    name: "Estilística",
+    subtopics: ["Elementos da comunicação", "Funções da linguagem", "Variação linguística"],
+  },
+  {
+    icon: Network,
+    name: "Coesão e coerência",
+    subtopics: ["Tipos de coesão", "Tipos de coerência"],
+  },
+  {
+    icon: FileText,
+    name: "Interpretação de Texto",
+    subtopics: [
+      "Dicas de interpretação",
+      "Compreensão x Interpretação",
+      "Inferir x Depreender",
+      "Análise do discurso",
+      "Tipos de discurso",
+      "Intertextualidade",
+      "Citação x Paráfrase",
+      "Paródia x Alusão",
+      "Tipologia textual",
+      "Gêneros textuais",
     ],
   },
 ];
