@@ -5,38 +5,38 @@ const benefits = [
   {
     icon: Zap,
     title: "Acesso imediato",
-    titleClass: "text-neon-pink",
+    titleClass: "text-[#bf1668]",
     description: "Receba seus mapas mentais no ato da compra, sem espera.",
   },
   {
     icon: Printer,
     title: "Pronto para impressão",
-    titleClass: "text-neon-yellow",
+    titleClass: "text-[#856000]",
     description: "Arquivos otimizados para você imprimir e estudar no papel quando quiser.",
   },
   {
     icon: Laptop,
     title: "Flexibilidade de acesso",
-    titleClass: "text-neon-cyan",
+    titleClass: "text-[#08788c]",
     description: "Estude no computador, celular ou tablet — onde e quando for melhor pra você.",
   },
   {
     icon: RefreshCw,
     title: "Atualizações gratuitas",
-    titleClass: "text-neon-lilac",
+    titleClass: "text-[#8042ad]",
     description: "Sempre que o material for atualizado, você recebe a nova versão sem pagar nada a mais.",
   },
   {
     icon: InfinityIcon,
     title: "Acesso vitalício",
-    titleClass: "text-neon-blue",
+    titleClass: "text-[#365bb5]",
     description: "Pagou uma vez, acesse pra sempre. Volte ao material quantas vezes precisar.",
   },
 ];
 
 const BenefitsSection = () => {
   return (
-    <section id="vantagens" className="section-padding">
+    <section id="vantagens" className="section-padding bg-[#faf7fc] text-[#281a36]">
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,11 +46,11 @@ const BenefitsSection = () => {
           className="text-center mb-14"
         >
           <h2 className="section-title">
-            <span className="text-neon-cyan">Vantagens</span>{" "}
-            <span className="text-neon-pink">de adquirir</span>{" "}
-            <span className="text-neon-yellow">os mapas mentais</span>
+            <span className="text-[#08788c]">Vantagens</span>{" "}
+            <span className="text-[#bf1668]">de adquirir</span>{" "}
+            <span className="text-[#856000]">os mapas mentais</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-[#594b65] text-lg max-w-2xl mx-auto">
             Praticidade e resultado desde o primeiro clique.
           </p>
         </motion.div>
@@ -65,15 +65,15 @@ const BenefitsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-card border border-border rounded-2xl p-6 flex flex-col items-start gap-4"
+                className="bg-white border border-[#e5dbea] rounded-2xl p-6 flex flex-col items-start gap-4 shadow-sm"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-primary" />
+                  <Icon className="w-6 h-6 text-[#bf1668]" />
                 </div>
                 <h3 className={`font-heading text-xl md:text-2xl ${b.titleClass}`}>
                   {b.title}
                 </h3>
-                <p className="text-foreground/85 leading-relaxed">{b.description}</p>
+                <p className="text-[#594b65] leading-relaxed">{b.description}</p>
               </motion.div>
             );
           })}
