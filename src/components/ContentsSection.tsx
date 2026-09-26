@@ -111,19 +111,19 @@ const topics = [
 
 const columnStyles = [
   {
-    neon: "text-neon-pink",
+    neon: "text-[#bf1668]",
     iconBox: "border-pink-400/35 from-pink-400/25 to-pink-400/5 shadow-pink-400/20 group-hover:border-pink-300/55 group-hover:shadow-pink-400/30",
   },
   {
-    neon: "text-neon-yellow",
+    neon: "text-[#856000]",
     iconBox: "border-yellow-300/35 from-yellow-300/25 to-yellow-300/5 shadow-yellow-300/20 group-hover:border-yellow-200/55 group-hover:shadow-yellow-300/30",
   },
   {
-    neon: "text-neon-cyan",
+    neon: "text-[#08788c]",
     iconBox: "border-cyan-300/35 from-cyan-300/25 to-cyan-300/5 shadow-cyan-300/20 group-hover:border-cyan-200/55 group-hover:shadow-cyan-300/30",
   },
   {
-    neon: "text-neon-lilac",
+    neon: "text-[#8042ad]",
     iconBox: "border-purple-300/35 from-purple-300/25 to-purple-300/5 shadow-purple-300/20 group-hover:border-purple-200/55 group-hover:shadow-purple-300/30",
   },
 ];
@@ -132,7 +132,7 @@ const ContentsSection = () => {
   const [activeTopic, setActiveTopic] = useState<string | null>(null);
 
   return (
-    <section id="conteudo" className="section-padding bg-muted/50">
+    <section id="conteudo" className="section-padding bg-[#faf7fc] text-[#281a36]">
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -142,11 +142,11 @@ const ContentsSection = () => {
           className="text-center mb-14"
         >
           <h2 className="section-title">
-            <span className="text-neon-cyan">O que você</span>{" "}
-            <span className="text-neon-pink">vai</span>{" "}
-            <span className="text-neon-yellow">encontrar</span>
+            <span className="text-[#08788c]">O que você</span>{" "}
+            <span className="text-[#bf1668]">vai</span>{" "}
+            <span className="text-[#856000]">encontrar</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+          <p className="text-[#594b65] text-lg max-w-xl mx-auto">
             Conteúdos essenciais de Língua Portuguesa mapeados para sua aprovação.
           </p>
         </motion.div>
@@ -166,15 +166,15 @@ const ContentsSection = () => {
                 onClick={() => topic.subtopics && setActiveTopic(activeTopic === topic.name ? null : topic.name)}
                 aria-expanded={topic.subtopics ? activeTopic === topic.name : undefined}
                 aria-controls={topic.subtopics ? `subtopics-${i}` : undefined}
-                className={`group relative min-h-[140px] w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-card via-card to-primary/[0.08] p-3 text-center transition-all duration-300 sm:min-h-[168px] sm:p-5 ${
+                className={`group relative min-h-[140px] w-full overflow-hidden rounded-2xl border bg-white shadow-sm p-3 text-center transition-all duration-300 sm:min-h-[168px] sm:p-5 ${
                   topic.subtopics
                     ? "cursor-pointer hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/15"
-                    : "cursor-default border-border"
-                } ${activeTopic === topic.name ? "border-primary/60 shadow-lg shadow-primary/10" : "border-border"}`}
+                    : "cursor-default border-[#e5dbea]"
+                } ${activeTopic === topic.name ? "border-primary/60 shadow-lg shadow-primary/10" : "border-[#e5dbea]"}`}
               >
                 <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-2xl transition-colors group-hover:bg-primary/20" />
                 {topic.subtopics && (
-                  <span className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full border border-primary/20 bg-background/45 text-primary backdrop-blur-sm transition-colors group-hover:bg-primary/15 sm:right-3 sm:top-3 sm:h-8 sm:w-8">
+                  <span className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full border border-primary/20 bg-pink-50 text-[#bf1668] transition-colors group-hover:bg-primary/15 sm:right-3 sm:top-3 sm:h-8 sm:w-8">
                     <ChevronDown
                       className={`h-4 w-4 transition-transform duration-300 ${
                         activeTopic === topic.name ? "rotate-180" : ""
@@ -183,7 +183,7 @@ const ContentsSection = () => {
                   </span>
                 )}
                 <div className={`relative mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border bg-gradient-to-br shadow-lg transition-all duration-300 group-hover:scale-105 sm:mb-4 sm:h-14 sm:w-14 ${columnStyle.iconBox}`}>
-                  <topic.icon className={`h-6 w-6 drop-shadow-[0_0_8px_currentColor] sm:h-7 sm:w-7 ${columnStyle.neon}`} />
+                  <topic.icon className={`h-6 w-6 sm:h-7 sm:w-7 ${columnStyle.neon}`} />
                 </div>
                 <span className={`relative inline-flex items-center font-heading text-sm font-semibold leading-snug sm:text-base md:text-lg ${columnStyle.neon}`}>
                   {topic.name}
@@ -200,14 +200,14 @@ const ContentsSection = () => {
                     transition={{ duration: 0.25 }}
                     className="col-span-2 overflow-hidden md:col-span-3 lg:col-span-4"
                   >
-                    <div className="mt-3 space-y-2 rounded-2xl border border-primary/30 bg-gradient-to-br from-card via-card to-primary/10 p-3 shadow-lg shadow-primary/5 sm:p-4">
+                    <div className="mt-3 space-y-2 rounded-2xl border border-primary/30 bg-white p-3 shadow-lg shadow-primary/5 sm:p-4">
                       {topic.subtopics.map((subtopic) => (
                         <div
                           key={subtopic}
-                          className="flex items-start gap-2 rounded-xl border border-border/80 bg-background/45 p-2.5 sm:gap-2.5 sm:p-3"
+                          className="flex items-start gap-2 rounded-xl border border-[#e5dbea] bg-[#faf7fc] p-2.5 sm:gap-2.5 sm:p-3"
                         >
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                          <span className="break-words text-xs font-medium leading-relaxed text-foreground/90 sm:text-sm">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#bf1668]" />
+                          <span className="break-words text-xs font-medium leading-relaxed text-[#594b65] sm:text-sm">
                             {subtopic}
                           </span>
                         </div>
