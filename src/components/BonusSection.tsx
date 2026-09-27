@@ -22,6 +22,8 @@ const bonuses = [
   },
 ];
 
+const bonusValueMessage = "Você investe em um único material e recebe um conjunto mais completo de estudo: mapas mentais, questões comentadas e flashcards pelo mesmo valor.";
+
 const BonusSection = () => {
   return (
     <section id="bonus" className="section-padding bg-muted/30">
@@ -56,7 +58,7 @@ const BonusSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative min-w-0 overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-card via-card to-primary/10 p-6 shadow-xl shadow-primary/5 sm:p-8"
+                className={`relative min-w-0 overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-card via-card to-primary/10 p-6 shadow-xl shadow-primary/5 sm:p-8 ${bonus.label === "Bônus 2" ? "lg:self-start" : ""}`}
               >
                 <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl" />
                 <div className="relative mb-5 flex items-center gap-4">
@@ -74,6 +76,14 @@ const BonusSection = () => {
                   {bonus.description}
                 </p>
                 {bonus.label === "Bônus 1" ? <QuestionsPreview /> : <FlashcardShowcase />}
+                {bonus.label === "Bônus 2" && (
+                  <div className="relative mt-8 hidden items-start gap-3 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-6 text-left lg:flex">
+                    <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-emerald-400" />
+                    <p className="font-heading text-xl font-semibold leading-relaxed text-foreground">
+                      {bonusValueMessage}
+                    </p>
+                  </div>
+                )}
               </motion.article>
             );
           })}
@@ -84,11 +94,11 @@ const BonusSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="mx-auto mt-8 flex max-w-3xl items-start gap-3 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-5 text-left sm:items-center sm:p-6"
+          className="mx-auto mt-8 flex max-w-3xl items-start gap-3 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-5 text-left sm:items-center sm:p-6 lg:hidden"
         >
           <CheckCircle2 className="mt-0.5 h-6 w-6 shrink-0 text-emerald-400 sm:mt-0" />
           <p className="font-heading text-base font-semibold leading-relaxed text-foreground sm:text-lg">
-            Você investe em um único material e recebe um conjunto mais completo de estudo: mapas mentais, questões comentadas e flashcards pelo mesmo valor.
+            {bonusValueMessage}
           </p>
         </motion.div>
       </div>
