@@ -18,7 +18,7 @@ it("shows either complete page and restores the split with buttons", () => {
   render(<QuestionsPreview />);
   fireEvent.click(screen.getByRole("button", { name: "Ver página 1" }));
   expect(screen.getByRole("slider")).toHaveValue("100");
-  fireEvent.click(screen.getByRole("button", { name: "Ver página 3" }));
+  fireEvent.click(screen.getByRole("button", { name: "Ver página 2" }));
   expect(screen.getByRole("slider")).toHaveValue("0");
   fireEvent.click(screen.getByRole("button", { name: "Ver as duas" }));
   expect(screen.getByRole("slider")).toHaveValue("50");
