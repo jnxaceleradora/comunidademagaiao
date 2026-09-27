@@ -1,23 +1,6 @@
 import { motion } from "framer-motion";
-import { Award, BookOpen, Target } from "lucide-react";
+import { Award } from "lucide-react";
 import marcelaPhoto from "@/assets/marcela-profissional-source.webp";
-
-const stats = [
-  {
-    icon: BookOpen,
-    title: "Método",
-    titleClass: "text-neon-pink",
-    eyebrow: "Clareza, fixação e revisão",
-    text: "Estudar mais não basta: é preciso estudar com direção. Por isso, cada mapa mental, resumo e questão organiza a Língua Portuguesa em uma sequência clara para compreender, fixar e revisar. Você identifica o que realmente importa, reduz o excesso de informação e chega à prova com mais segurança para reconhecer padrões, evitar armadilhas e aplicar o conhecimento.",
-  },
-  {
-    icon: Target,
-    title: "Foco",
-    titleClass: "text-neon-lilac",
-    eyebrow: "Conteúdo que se transforma em resultado",
-    text: "Na Comunidade Magaião, o foco é transformar conteúdos que parecem difíceis em aprendizado objetivo e aplicável. A linguagem é clara, sem abrir mão da profundidade: conceitos essenciais, pontos mais cobrados e revisão estratégica. Assim, você constrói uma base sólida em Português, estuda com constância e evolui com um método pensado para o desempenho na prova.",
-  },
-];
 
 const AuthoritySection = () => {
   return (
@@ -45,7 +28,7 @@ const AuthoritySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative mb-8 overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-background/80 via-secondary-foreground/[0.04] to-primary/10 shadow-2xl shadow-primary/10"
+          className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-background/80 via-secondary-foreground/[0.04] to-primary/10 shadow-2xl shadow-primary/10"
         >
           <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
           <div className="relative grid items-center lg:grid-cols-[0.85fr_1.15fr]">
@@ -83,32 +66,6 @@ const AuthoritySection = () => {
           </div>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-background/80 via-secondary-foreground/[0.04] to-primary/10 p-7 shadow-xl shadow-primary/5 md:p-9"
-            >
-              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl transition-colors group-hover:bg-primary/20" />
-              <div className="relative mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/15">
-                <stat.icon className="h-6 w-6 text-primary" />
-              </div>
-              <p className="relative mb-2 font-heading text-xs font-semibold uppercase tracking-[0.16em] text-neon-cyan/90">
-                {stat.eyebrow}
-              </p>
-              <h3 className={`relative mb-4 font-heading text-2xl font-bold md:text-3xl ${stat.titleClass}`}>
-                {stat.title}
-              </h3>
-              <p className="relative text-base leading-relaxed text-secondary-foreground/85 md:text-lg">
-                {stat.text}
-              </p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

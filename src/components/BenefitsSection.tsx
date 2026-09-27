@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, Printer, Laptop, RefreshCw, Infinity as InfinityIcon } from "lucide-react";
+import { ArrowRight, Zap, Printer, Laptop, RefreshCw } from "lucide-react";
 
 const benefits = [
   {
@@ -26,12 +26,6 @@ const benefits = [
     titleClass: "text-[#8042ad]",
     description: "Sempre que o material for atualizado, você recebe a nova versão sem pagar nada a mais.",
   },
-  {
-    icon: InfinityIcon,
-    title: "Acesso vitalício",
-    titleClass: "text-[#365bb5]",
-    description: "Pagou uma vez, acesse pra sempre. Volte ao material quantas vezes precisar.",
-  },
 ];
 
 const BenefitsSection = () => {
@@ -55,7 +49,7 @@ const BenefitsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {benefits.map((b, i) => {
             const Icon = b.icon;
             return (
