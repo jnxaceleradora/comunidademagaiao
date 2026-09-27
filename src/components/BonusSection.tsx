@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, FileQuestion, GalleryHorizontalEnd, Gift } from "lucide-react";
 import FlashcardShowcase from "./FlashcardShowcase";
+import QuestionsPreview from "./QuestionsPreview";
 
 const bonuses = [
   {
@@ -72,7 +73,7 @@ const BonusSection = () => {
                 <p className="relative text-base leading-relaxed text-foreground/85 sm:text-lg">
                   {bonus.description}
                 </p>
-                {bonus.label === "Bônus 2" && <FlashcardShowcase />}
+                {bonus.label === "Bônus 1" ? <QuestionsPreview /> : <FlashcardShowcase />}
               </motion.article>
             );
           })}
