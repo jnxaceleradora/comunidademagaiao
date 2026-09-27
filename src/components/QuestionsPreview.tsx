@@ -6,7 +6,7 @@ const QuestionsPreview = () => {
   const [split, setSplit] = useState(50);
   return (
     <div className="relative mt-6">
-      <div className="relative isolate overflow-hidden rounded-xl border border-primary/20 bg-white shadow-lg focus-within:ring-2 focus-within:ring-primary">
+      <div className="relative isolate overflow-hidden rounded-xl border border-primary/20 bg-white shadow-lg focus-within:ring-2 focus-within:ring-primary lg:mx-auto lg:max-w-[340px]">
         <img src={pageThree} alt="Página 2 — Respostas comentadas das questões de crase" width={1132} height={1600} loading="lazy" decoding="async" draggable={false} className="block h-auto w-full select-none" />
         <img src={pageOne} alt="Página 1 — Questões de crase da professora Marcela Gaião" width={1132} height={1600} loading="lazy" decoding="async" draggable={false} style={{ clipPath: `inset(0 ${100 - split}% 0 0)` }} className="absolute inset-0 h-full w-full select-none object-contain" />
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-3 flex justify-between gap-2 px-3 text-xs font-bold">

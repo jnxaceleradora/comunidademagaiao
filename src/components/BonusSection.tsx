@@ -58,7 +58,7 @@ const BonusSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative min-w-0 overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-card via-card to-primary/10 p-6 shadow-xl shadow-primary/5 sm:p-8 ${bonus.label === "Bônus 2" ? "lg:self-start" : ""}`}
+                className="relative min-w-0 overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-card via-card to-primary/10 p-6 shadow-xl shadow-primary/5 sm:p-8 lg:self-stretch"
               >
                 <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl" />
                 <div className="relative mb-5 flex items-center gap-4">
