@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, FileQuestion, GalleryHorizontalEnd, Gift } from "lucide-react";
+import FlashcardShowcase from "./FlashcardShowcase";
 
 const bonuses = [
   {
@@ -54,7 +55,7 @@ const BonusSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-card via-card to-primary/10 p-6 shadow-xl shadow-primary/5 sm:p-8"
+                className="relative min-w-0 overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-card via-card to-primary/10 p-6 shadow-xl shadow-primary/5 sm:p-8"
               >
                 <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl" />
                 <div className="relative mb-5 flex items-center gap-4">
@@ -71,6 +72,7 @@ const BonusSection = () => {
                 <p className="relative text-base leading-relaxed text-foreground/85 sm:text-lg">
                   {bonus.description}
                 </p>
+                {bonus.label === "Bônus 2" && <FlashcardShowcase />}
               </motion.article>
             );
           })}
