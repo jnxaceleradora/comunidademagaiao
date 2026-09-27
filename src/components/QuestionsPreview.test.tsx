@@ -1,33 +1,31 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
-import { afterEach, expect, it, vi } from "vitest";
+import { afterEach, expect, it } from "vitest";
 import QuestionsPreview from "./QuestionsPreview";
 
-afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
+afterEach(cleanup);
 
-it("shows only the two requested pages and switches on mouse hover", () => {
-  vi.stubGlobal("PointerEvent", MouseEvent);
+it("starts with half of each page without hover switching", () => {
   render(<QuestionsPreview />);
-  const button = screen.getByRole("button");
-  expect(button.querySelectorAll("img")).toHaveLength(2);
-  expect(button).toHaveAttribute("aria-pressed", "false");
-  const enter = new MouseEvent("pointerover", { bubbles: true });
-  Object.defineProperty(enter, "pointerType", { value: "mouse" });
-  fireEvent(button, enter);
-  expect(button).toHaveAttribute("aria-pressed", "true");
-  const leave = new MouseEvent("pointerout", { bubbles: true });
-  Object.defineProperty(leave, "pointerType", { value: "mouse" });
-  fireEvent(button, leave);
-  expect(button).toHaveAttribute("aria-pressed", "false");
+  const slider = screen.getByRole("slider");
+  expect(slider).toHaveValue("50");
+  expect(screen.getAllByRole("img")).toHaveLength(2);
+  expect(screen.getByAltText(/Página 1/)).toHaveStyle({ clipPath: "inset(0 50% 0 0)" });
+  fireEvent.mouseOver(slider);
+  expect(slider).toHaveValue("50");
 });
 
-it("toggles with touch clicks and keyboard activation", () => {
-  vi.stubGlobal("matchMedia", () => ({ matches: false }));
+it("shows either complete page and restores the split with buttons", () => {
   render(<QuestionsPreview />);
-  const button = screen.getByRole("button");
-  fireEvent.click(button, { detail: 1 });
-  expect(button).toHaveAttribute("aria-pressed", "true");
-  fireEvent.click(button, { detail: 1 });
-  expect(button).toHaveAttribute("aria-pressed", "false");
-  fireEvent.click(button, { detail: 0 });
-  expect(button).toHaveAttribute("aria-pressed", "true");
+  fireEvent.click(screen.getByRole("button", { name: "Ver página 1" }));
+  expect(screen.getByRole("slider")).toHaveValue("100");
+  fireEvent.click(screen.getByRole("button", { name: "Ver página 3" }));
+  expect(screen.getByRole("slider")).toHaveValue("0");
+  fireEvent.click(screen.getByRole("button", { name: "Ver as duas" }));
+  expect(screen.getByRole("slider")).toHaveValue("50");
+});
+
+it("updates clipping when the slider moves", () => {
+  render(<QuestionsPreview />);
+  fireEvent.change(screen.getByRole("slider"), { target: { value: "25" } });
+  expect(screen.getByAltText(/Página 1/)).toHaveStyle({ clipPath: "inset(0 75% 0 0)" });
 });
